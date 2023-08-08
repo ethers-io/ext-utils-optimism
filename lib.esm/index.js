@@ -1,3 +1,2 @@
-"use strict";
-//import { ethers } from "ethers";
+export { estimateGas } from "./fees.js";
 //# sourceMappingURL=index.js.map

@@ -76,17 +76,9 @@ function estimateGas(_tx, _provider) {
             options.blockTag = _tx.blockTag;
         }
         // Compute the L1 gas
-        const gasL1 = yield contract.getL1Fee(dataL1, options);
+        const gasL1 = yield contract.getL1GasUsed(dataL1, options);
         return { gas: (gasL1 + gasL2), gasL1, gasL2 };
     });
 }
 exports.estimateGas = estimateGas;
-/*
-(async function() {
-   console.log(await estimateGas({
-     to: "0x8ba1f109551bD432803012645Ac136ddd64DBA72",
-     data: "0x12345678"
-   }));
-})();
-*/
 //# sourceMappingURL=fees.js.map
