@@ -88,16 +88,7 @@ export async function estimateGas(_tx: TransactionRequest, _provider?: string | 
     if (_tx.blockTag) { options.blockTag = _tx.blockTag; }
 
     // Compute the L1 gas
-    const gasL1 = await contract.getL1Fee(dataL1, options);
+    const gasL1 = await contract.getL1GasUsed(dataL1, options);
 
     return { gas: (gasL1 + gasL2), gasL1, gasL2 };
 }
-
-/*
-(async function() {
-   console.log(await estimateGas({
-     to: "0x8ba1f109551bD432803012645Ac136ddd64DBA72",
-     data: "0x12345678"
-   }));
-})();
-*/
