@@ -3,7 +3,7 @@ Ethers: Optimistic Utilities
 
 The Optimism utilities is a small package to provide some
 additional utilities required for those that wish to more
-closely interact with Optimism-sepcific features.
+closely interact with Optimism-specific features.
 
 **This package is currently experimental and beta; the API is subject to change.**
 
